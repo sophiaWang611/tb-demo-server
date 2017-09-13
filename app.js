@@ -6,9 +6,16 @@ var express = require('express'),
     path = require('path'),
     _ = require('underscore'),
     cookieParser = require('cookie-parser'),
-    uuid = require('node-uuid');
+    uuid = require('node-uuid'),
+    log4js = require("./util").log4js,
+    logger = log4js.getLogger("http");
 
 var app = express();
+app.use(log4js.connectLogger(logger, {
+    level: 'auto',
+    format: ':req[x-request-id]^#:method^#:url^#HTTP/:http-version^#:remote-addr^#:status^#:response-time^#:req[cookie]'
+}));
+
 var myClients = {
     '1': '1secret'
 };
