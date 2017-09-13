@@ -1,0 +1,15 @@
+{
+  "apps": [
+    {
+      "name":"teambition-server",
+      "script": "bin/www",
+      "node_args":"--harmony",
+      "watch": false,
+      "instances": 1,
+      "exec_mode":"cluster",
+      "merge_logs":true,
+      "max_memory_restart":"400M",
+      "max_restarts":10
+    }
+  ]
+}
