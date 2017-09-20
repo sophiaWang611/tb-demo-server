@@ -9,7 +9,7 @@
       "exec_mode":"cluster",
       "merge_logs":true,
       "max_memory_restart":"400M",
-      "max_restarts":10
+      "max_restarts":1
     }
   ]
 }
