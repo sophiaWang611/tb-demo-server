@@ -1,0 +1,62 @@
+/* Global */
+* {
+  box-sizing: border-box;
+}
+#teambition-config {
+  display: none;
+}
+/* Loading */
+#bodyloadinglayer {
+  position: fixed;
+  z-index: 3001;
+  top: 0;
+  left: 0;
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -ms-grid-row-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 318ms ease-in-out;
+  /* Raise CG */
+  padding-top: 100px;
+  padding-bottom: 120px;
+}
+#bodyloadinglayer #logo {
+  -ms-flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 80px;
+  height: 80px;
+  background-size: 80px 80px;
+  background-repeat: no-repeat;
+  transition: all 250ms linear;
+  opacity: 0;
+}
+#bodyloadinglayer #logo.fadein {
+  transition-duration: 300ms;
+}
+#bodyloadinglayer #logo.fadein {
+  opacity: 1;
+}
+/* Fading */
+#bodyloadinglayer.fading {
+  opacity: 0;
+}
+#bodyloadinglayer.fading > #logo {
+  -webkit-transform: translate3d(0, -40px, 0);
+  transform: translate3d(0, -40px, 0);
+}

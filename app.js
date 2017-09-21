@@ -49,6 +49,7 @@ function _isInExceptList(url, excepts) {
 }
 
 app.use('/', require('./router/index'));
+app.use('/task', require('./router/task'));
 
 app.use(function (req, res, next) {
     var err = new Error('Not Found');
